@@ -8,9 +8,9 @@ interface Product {
 }
 
 const Page: React.FC = () => {
-  const [cart, setCart] = useState<Product[]>([])
+  const [cart, setCart] = useState<Product[]>([]);
   const addCart = (product: Product) => {
-    setCart([...cart, product])
+    setCart([...cart, product]);
   }
   const products: Product[] = [
     { id: 1, name: 'Product 1', price: 10 },

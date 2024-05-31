@@ -21,7 +21,7 @@ const ProductCart: React.FC<CardProps> = ({ product, onAddCart }) => {
                 Adicionar
             </button>
         </div>
-    )
+    );
 }
 
 export default ProductCart
