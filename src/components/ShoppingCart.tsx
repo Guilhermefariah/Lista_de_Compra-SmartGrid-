@@ -5,3 +5,7 @@ interface Product {
     name: string;
     price: number;
 }
+interface ShoppingCart {
+    items: Product[];
+    onRemoveFromCart: (product: Product) => void;
+}
