@@ -18,6 +18,16 @@ const Page: React.FC = () => {
     { id: 3, name: 'Product 3', price: 30 }
   ]
 
+  return (
+    <div className="">
+      <h1 className="">
+        <div className="">
+          
+        </div>
+      </h1>
+    </div>
+  )
+
 
 
 
