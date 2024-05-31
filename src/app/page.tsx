@@ -19,12 +19,11 @@ const Page: React.FC = () => {
   ]
 
   return (
-    <div className="">
-      <h1 className="">
-        <div className="">
+    <div className="container mx-auto p-4">
+      <h1 className="text-2x1 font-bold mb-4">Test </h1>
+        <div className="grid grid-cols-3 gap-4">
           
         </div>
-      </h1>
     </div>
   )
 
