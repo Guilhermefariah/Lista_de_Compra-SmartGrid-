@@ -9,3 +9,6 @@ interface CardProps {
     product: Product;
     onAddCart: (Product: Product) => void;
 }
+const ProductCart: React.FC<CardProps> = ({ product, onAddCart }) => {
+    
+}
