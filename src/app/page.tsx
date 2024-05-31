@@ -8,6 +8,9 @@ interface Product {
 }
 
 const Page: React.FC = () => {
-  const[cart, setCart] = useState<Product[]>([])
+  const [cart, setCart] = useState<Product[]>([])
+  const addCart = (product: Product) =>{
+    
+  }
 }
 export default Page;
