@@ -5,7 +5,11 @@ interface Product {
     name: string;
     price: number;
 }
-interface ShoppingCart {
+interface onShoppingCart {
     items: Product[];
-    onRemoveFromCart: (product: Product) => void;
+    onRemoveCart: (product: Product) => void;
 }
+const ShoppingCart: React.FC<onShoppingCart> = ({ items, onRemoveCart }) => {
+
+}
+export default ShoppingCart
