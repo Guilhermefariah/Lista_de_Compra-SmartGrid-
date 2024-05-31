@@ -5,3 +5,7 @@ interface Product {
     name: string;
     price: number;
 }
+interface CardProps {
+    product: Product;
+    onAddCart: (Product: Product) => void;
+}
