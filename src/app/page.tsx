@@ -8,6 +8,6 @@ interface Product {
 }
 
 const Page: React.FC = () => {
-
+  const[cart, setCart] = useState<Product[]>([])
 }
 export default Page;
