@@ -18,7 +18,7 @@ const ProductCart: React.FC<CardProps> = ({ product, onAddCart }) => {
                 onClick={() => onAddCart(product)}
                 className="bg-rose-600 text-white px-4 py-2 mt-2 rounded-lg"
             >
-                Adicionar ao Carrinho
+                Adicionar
             </button>
         </div>
     )
