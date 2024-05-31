@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import ProductCart from "@/components/ProductCart";
+import ShoppingCart from "@/components/ShoppingCart";
 
 interface Product {
   id: number;
