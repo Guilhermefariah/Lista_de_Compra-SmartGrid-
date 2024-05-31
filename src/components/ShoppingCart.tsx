@@ -10,6 +10,6 @@ interface onShoppingCart {
     onRemoveCart: (product: Product) => void;
 }
 const ShoppingCart: React.FC<onShoppingCart> = ({ items, onRemoveCart }) => {
-
+    const [isOpen, setOpen] = useState(false);
 }
 export default ShoppingCart
