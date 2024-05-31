@@ -27,7 +27,7 @@ const Page: React.FC = () => {
             {products.map(product => (
               <div key={product.id} className="border p-4 rounded-lg">
                 <h2 className="text-lg font-bold">{product.name}</h2>
-                <p className="text-white">${product.price.toFixed(2)}</p>
+                <p className="text-white">R$ {product.price.toFixed(2)}</p>
                 <button onClick={() => addCart(product)} className="bg-rose-600 text-white px-4 py-2 mt-2 rounded-lg">Adicionar ao Carrinho</button>
               </div>
             ))}

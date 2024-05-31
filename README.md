@@ -25,7 +25,7 @@ npm install
 ### Inicie o servidor de desenvolvimento:
 
 ```sh
-npm start
+npm run dev
 ```
 #### Abra o navegador e acesse http://localhost:3000 para ver a aplicação em funcionamento.
 
@@ -38,7 +38,11 @@ frontend/
 |-- components/
 |   |-- ProductCard.tsx
 |   |-- ShoppingCart.tsx
-
+|   
+|-- package.json
+|-- tsconfig.json
+|-- .eslintrc.json
+|-- tailwind.config.js
 ```
 
 ## Contribuição
