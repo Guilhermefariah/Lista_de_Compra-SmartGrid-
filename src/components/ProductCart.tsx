@@ -12,3 +12,4 @@ interface CardProps {
 const ProductCart: React.FC<CardProps> = ({ product, onAddCart }) => {
     
 }
+export default ProductCart
