@@ -6,3 +6,7 @@ interface Product {
   name: string;
   price: string;
 }
+
+const Page: React.FC = () => {
+  
+}
