@@ -11,7 +11,7 @@ interface Product {
 
 const Page: React.FC = () => {
   const [cart, setCart] = useState<Product[]>([]);
-  const addToCart = (product: Product) => {
+  const addCart = (product: Product) => {
     setCart([...cart, product]);
   };
   const removeCart = (product: Product) => {
@@ -34,7 +34,7 @@ const Page: React.FC = () => {
           <div className="grid grid-cols-3 gap-4">
             {products.map(product => (
               <div key={product.id} className="border p-4 rounded-lg">
-                <ProductCart product={product} onAddCart={addToCart} />
+                <ProductCart product={product} onAddCart={addCart} />
               </div>
             ))}
           </div>
