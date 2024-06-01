@@ -13,6 +13,7 @@ interface ShoppingCartProps {
 
 const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFinish }) => {
     const [isOpen, setOpen] = useState(false);
+    const [payMent, setPay] = useState<string>('');
     const updateCart = () => {
         setOpen(!isOpen);
     };
