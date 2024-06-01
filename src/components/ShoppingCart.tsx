@@ -20,7 +20,9 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
     const calcTotal = () => {
         return items.reduce((total, item) => total + item.price, 0);
     };
-
+    const handleLogout = () => {
+        setConfirm(true);
+    };
     const cancelLogout = () => {
         setConfirm(false);
     };
@@ -68,6 +70,9 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
                     </div>
                     <button onClick={onFinish} className="bg-green-500 text-white px-4 py-2 mt-4 rounded-lg">
                         Finalizar Compra
+                    </button>
+                    <button onClick={handleLogout} className="bg-red-500 text-white px-4 py-2 mt-4 rounded-lg">
+                        Sair
                     </button>
                 </div>
             )}
