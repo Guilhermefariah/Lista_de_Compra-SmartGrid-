@@ -32,16 +32,40 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
                     <ul>
                         {items.map(item => (
                             <li key={item.id}>
-                                {item.name} - R$ {item.price.toFixed(2)}{" "}
-                                <button onClick={() => onRemoveCart(item)} className="text-red-600">Delete</button>
+                                {item.name} - R$ {item.price.toFixed(2)}{' '}
+                                <button onClick={() => onRemoveCart(item)} className="text-red-600">
+                                    Delete
+                                </button>
                             </li>
                         ))}
                     </ul>
                     <p className="font-bold mt-2 text-lg">Total: R$ {calcTotal().toFixed(2)}</p>
+                    <div className="mt-4">
+                        <label>
+                            <input
+                                type="radio"
+                                value="boleto"
+                                checked={payMent === 'boleto'}
+                                onChange={() => setPay('boleto')}
+                            />
+                            Boleto Bancário
+                        </label>
+                        <label className="ml-4">
+                            <input
+                                type="radio"
+                                value="cartao"
+                                checked={payMent === 'cartao'}
+                                onChange={() => setPay('cartao')}
+                            />
+                            Cartão de Crédito
+                        </label>
+                    </div>
+                    <button onClick={onFinish} className="bg-green-500 text-white px-4 py-2 mt-4 rounded-lg">
+                        Finalizar Compra
+                    </button>
                 </div>
             )}
         </div>
-
     );
 };
 
