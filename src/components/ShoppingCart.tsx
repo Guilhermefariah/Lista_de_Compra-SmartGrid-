@@ -79,14 +79,16 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
                         Sair
                     </button>
                     {onSetConfirm && (
-                        <div className="mt-4 bg-gray-200 p-4 rounded-lg">
-                            <p className="mb-4">Tem certeza que deseja sair?</p>
-                            <button onClick={confirmLogout} className="bg-red-500 text-white px-4 py-2 rounded-lg mr-2">
-                                Sim
-                            </button>
-                            <button onClick={cancelLogout} className="bg-gray-500 text-white px-4 py-2 rounded-lg">
-                                Não
-                            </button>
+                        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                            <div className="bg-white p-4 rounded-lg shadow-lg">
+                                <p className="mb-4 text-xl">Tem certeza que deseja sair?</p>
+                                <button onClick={confirmLogout} className="bg-red-500 text-white px-4 py-2 rounded-lg mr-2">
+                                    Sim
+                                </button>
+                                <button onClick={cancelLogout} className="bg-green-500 text-white px-8 py-2 rounded-lg">
+                                    Não
+                                </button>
+                            </div>
                         </div>
                     )}
                 </div>

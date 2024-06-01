@@ -25,6 +25,7 @@ const Page: React.FC = () => {
     { id: 5, name: 'Product 5', price: 50 },
     { id: 6, name: 'Product 6', price: 60 }
   ];
+  
   return (
     <div className="flex justify-between items-center h-screen">
       <div className="fixed top-4 right-4 z-10 text-lg">
