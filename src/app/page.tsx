@@ -28,9 +28,9 @@ const Page: React.FC = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center h-screen">
+    <div className="flex justify-center items-center h-screen">
       < Navbar />
-      <div className="fixed top-4 right-4 z-10 text-lg">
+      <div className="fixed top-4 mt-12 right-4 z-10 text-lg">
         <ShoppingCart items={cart} onRemoveCart={removeCart} />
       </div>
       <div className="text-white p-4 bg-no-repeat rounded-lg shadow-2xl bg-teal-700 hover:shadow-black">
