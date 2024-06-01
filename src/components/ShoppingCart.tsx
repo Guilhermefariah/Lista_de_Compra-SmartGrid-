@@ -14,6 +14,7 @@ interface ShoppingCartProps {
 const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFinish }) => {
     const [isOpen, setOpen] = useState(false);
     const [payMent, setPay] = useState<string>('');
+    const [onSetConfirm, setConfirm] = useState(false);
     const updateCart = () => {
         setOpen(!isOpen);
     };
@@ -45,7 +46,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
                                     {item.name} - R$ {item.price.toFixed(2)}
                                 </span>
                                 <button onClick={() => onRemoveCart(item)} className="text-red-600 ml-12">
-                                    <img src="/img/lixeira.png" alt="Delete" className="w-8 h-8"/>
+                                    <img src="/img/lixeira.png" alt="Delete" className="w-8 h-8" />
                                 </button>
                             </li>
                         ))}
@@ -77,6 +78,17 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
                     <button onClick={handleLogout} className="bg-red-500 text-white px-4 py-2 mt-4 rounded-lg">
                         Sair
                     </button>
+                    {onSetConfirm && (
+                        <div className="mt-4 bg-gray-200 p-4 rounded-lg">
+                            <p className="mb-4">Tem certeza que deseja sair?</p>
+                            <button onClick={confirmLogout} className="bg-red-500 text-white px-4 py-2 rounded-lg mr-2">
+                                Sim
+                            </button>
+                            <button onClick={cancelLogout} className="bg-gray-500 text-white px-4 py-2 rounded-lg">
+                                Não
+                            </button>
+                        </div>
+                    )}
                 </div>
             )}
         </div>
