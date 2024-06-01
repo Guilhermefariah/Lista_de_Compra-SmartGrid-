@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import ProductCart from "@/components/ProductCart";
 import ShoppingCart from "@/components/ShoppingCart";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 interface Product {
   id: number;
@@ -45,6 +46,7 @@ const Page: React.FC = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
