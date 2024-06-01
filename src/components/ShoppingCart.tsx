@@ -12,7 +12,7 @@ interface ShoppingCartProps {
 
 const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart }) => {
     const [isOpen, setOpen] = useState(false);
-    const toggleCart = () => {
+    const updateCart = () => {
         setOpen(!isOpen);
     };
     const calcTotal = () => {
@@ -21,7 +21,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart }) => {
 
     return (
         <>
-            <button onClick={toggleCart} className="p-2 rounded-md">
+            <button onClick={updateCart} className="p-2 rounded-md">
                 <img src="/img/carrinho.png" alt="Cart" className="w-12 h-12 mr-2" />
             </button>
             {isOpen && (
