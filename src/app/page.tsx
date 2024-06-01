@@ -28,7 +28,7 @@ const Page: React.FC = () => {
       <div className="fixed top-4 right-4 z-10">
         <ShoppingCart items={cart} onRemoveCart={removeCart} />
       </div>
-      <div className="text-white p-4 bg-no-repeat rounded-lg shadow-2xl bg-zinc-800 hover:shadow-black">
+      <div className="text-white p-4 bg-no-repeat rounded-lg shadow-2xl bg-teal-700 hover:shadow-black">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-3xl font-bold mb-4 text-center">Lista de Compras</h1>
           <div className="grid grid-cols-3 gap-4">
