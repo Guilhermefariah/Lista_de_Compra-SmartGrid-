@@ -23,6 +23,9 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
     const handleLogout = () => {
         setConfirm(true);
     };
+    const confirmLogout = () => {
+        setConfirm(false);
+    };
     const cancelLogout = () => {
         setConfirm(false);
     };
