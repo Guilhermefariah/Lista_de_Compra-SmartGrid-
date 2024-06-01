@@ -25,13 +25,13 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart }) => {
                 <img src="/img/carrinho.png" alt="Cart" className="w-12 h-12 mr-2" />
             </button>
             {isOpen && (
-                <div className="border p-4 m-4 absolute top-14 right-0 bg-white shadow-lg rounded-lg">
-                    <h2 className="text-lg font-bold mb-2">Shopping Cart</h2>
+                <div className="border p-2 m-2 absolute top-14 right-0 bg-white shadow-lg rounded-lg">
+                    <h2 className="text-lg font-bold mb-4">Shopping Carrinho</h2>
                     <ul>
                         {items.map(item => (
                             <li key={item.id}>
                                 {item.name} - ${item.price.toFixed(2)}{" "}
-                                <button onClick={() => onRemoveCart(item)} className="text-red-600">Remove</button>
+                                <button onClick={() => onRemoveCart(item)} className="text-red-600">Remover</button>
                             </li>
                         ))}
                     </ul>
