@@ -8,6 +8,7 @@ interface Product {
 interface ShoppingCartProps {
     items: Product[];
     onRemoveCart: (product: Product) => void;
+    onFinish: () => void;
 }
 
 const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart }) => {
