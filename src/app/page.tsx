@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import ProductCart from "@/components/ProductCart";
 import ShoppingCart from "@/components/ShoppingCart";
+import Navbar from "@/components/Navbar";
 
 interface Product {
   id: number;
@@ -25,9 +26,10 @@ const Page: React.FC = () => {
     { id: 5, name: 'Product 5', price: 50 },
     { id: 6, name: 'Product 6', price: 60 }
   ];
-  
+
   return (
     <div className="flex justify-between items-center h-screen">
+      < Navbar />
       <div className="fixed top-4 right-4 z-10 text-lg">
         <ShoppingCart items={cart} onRemoveCart={removeCart} />
       </div>
