@@ -2,6 +2,9 @@
 
 Este é um projeto de frontend para um e-commerce simples, desenvolvido em Next.js. Ele inclui componentes para exibir produtos e um carrinho de compras.
 
+![Alt text](/public/img/Lista_de_Compras.jpeg)
+
+
 ## Pré-requisitos
 Node.js instalado
 
