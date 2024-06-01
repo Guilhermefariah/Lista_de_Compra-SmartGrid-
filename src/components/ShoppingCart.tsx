@@ -8,10 +8,10 @@ interface Product {
 interface ShoppingCartProps {
     items: Product[];
     onRemoveCart: (product: Product) => void;
-    onFinish: () => void;
+    onFinish?: () => void;
 }
 
-const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart }) => {
+const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFinish }) => {
     const [isOpen, setOpen] = useState(false);
     const updateCart = () => {
         setOpen(!isOpen);
