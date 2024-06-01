@@ -27,16 +27,16 @@ const Page: React.FC = () => {
   ];
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="fixed top-4 right-4 z-10">
+    <div className="flex justify-between items-center h-screen">
+      <div className="fixed top-4 right-4 z-10 text-lg">
         <ShoppingCart items={cart} onRemoveCart={removeCart} />
       </div>
       <div className="text-white p-4 bg-no-repeat rounded-lg shadow-2xl bg-teal-700 hover:shadow-black">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4 text-center">Lista de Compras</h1>
+          <h1 className="text-4xl font-bold mb-4 text-center">Lista de Compras</h1>
           <div className="grid grid-cols-3 gap-4">
             {products.map(product => (
-              <div key={product.id} className="border p-4 rounded-lg">
+              <div key={product.id} className="border p-4 rounded-lg text-lg">
                 <ProductCart product={product} onAddCart={addCart} />
               </div>
             ))}
