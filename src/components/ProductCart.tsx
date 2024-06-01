@@ -4,6 +4,7 @@ interface Product {
   id: number;
   name: string;
   price: number;
+  image: string;
 }
 interface CardProps {
   product: Product;
@@ -13,6 +14,7 @@ const ProductCart: React.FC<CardProps> = ({ product, onAddCart }) => {
   return (
     <div>
       <h2>{product.name}</h2>
+      <img src={product.image} alt={product.name} className="w-full h-40 object-cover" />
       <p>R$ {product.price.toFixed(2)}</p>
       <button
         onClick={() => onAddCart(product)}
@@ -22,6 +24,6 @@ const ProductCart: React.FC<CardProps> = ({ product, onAddCart }) => {
       </button>
     </div>
   );
-};
+}
 
-export default ProductCart;
+export default ProductCart

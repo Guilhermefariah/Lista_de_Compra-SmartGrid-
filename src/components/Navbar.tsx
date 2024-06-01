@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const Navbar: React.FC = () => {
     const [timeLeft, setTimeLeft] = useState(600);
-    const [accordionOpen, setAccordionOpen] = useState(false);
+    const [accordionOpen, setLogo] = useState(false);
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -12,8 +12,8 @@ const Navbar: React.FC = () => {
         return () => clearInterval(timer);
     }, []);
 
-    const toggleAccordion = () => {
-        setAccordionOpen(prevState => !prevState);
+    const openLogo = () => {
+        setLogo(prevState => !prevState);
     };
 
     const formatTime = (seconds: number) => {
@@ -23,9 +23,9 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <nav className="fixed top-0 w-full bg-teal-700 p-0 flex justify-between items-center shadow-lg z-50">
+        <nav className="fixed top-0 w-full bg-teal-700 p-0 flex mb-4 justify-between items-center shadow-lg z-50">
             <div className="relative">
-                <div onClick={toggleAccordion} className="cursor-pointer">
+                <div onClick={openLogo} className="cursor-pointer">
                     <img src="/img/mercado.png" alt="Logo" className="h-10 w-10 ml-2" />
                 </div>
                 {accordionOpen && (
