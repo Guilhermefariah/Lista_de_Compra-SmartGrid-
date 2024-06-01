@@ -21,6 +21,10 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
         return items.reduce((total, item) => total + item.price, 0);
     };
 
+    const cancelLogout = () => {
+        setConfirm(false);
+    };
+
     return (
         <div className="flex justify-between items-center">
             <button onClick={updateCart} className="p-2 rounded-md">
@@ -28,13 +32,15 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
             </button>
             {isOpen && (
                 <div className="border p-2 m-2 bg-white shadow-lg rounded-lg w-max">
-                    <h2 className="text-lg font-bold mb-4">Shopping Cart</h2>
+                    <h2 className="text-3xl font-bold mb-4 text-center text-slate-700">Itens Selecionados</h2>
                     <ul>
                         {items.map(item => (
-                            <li key={item.id}>
-                                {item.name} - R$ {item.price.toFixed(2)}{' '}
-                                <button onClick={() => onRemoveCart(item)} className="text-red-600">
-                                    Delete
+                            <li key={item.id} className="flex justify-between items-center">
+                                <span>
+                                    {item.name} - R$ {item.price.toFixed(2)}
+                                </span>
+                                <button onClick={() => onRemoveCart(item)} className="text-red-600 ml-12">
+                                    <img src="/img/lixeira.png" alt="Delete" className="w-8 h-8"/>
                                 </button>
                             </li>
                         ))}
