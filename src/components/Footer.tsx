@@ -1,7 +1,7 @@
 import React from "react";
 
 const Footer: React.FC = () => (
-    <footer className="w-full bg-teal-700 text-white py-2 mt-2 fixed bottom-0">
+    <footer className="bg-teal-700 text-white fixed bottom-0 w-full">
         <div className="container mx-auto text-center">
             <p className="text-lg">&copy; 2024 Guilherme Faria. Todos os direitos reservados.</p>
             <div className="flex justify-center mt-2 space-x-4">
