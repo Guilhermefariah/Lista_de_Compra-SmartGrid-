@@ -14,7 +14,7 @@ const ProductCart: React.FC<CardProps> = ({ product, onAddCart }) => {
   return (
     <div>
       <h2>{product.name}</h2>
-      <img src={product.image} alt={product.name} className="w-full h-40 object-cover" />
+      <img src={product.image} alt={product.name} className="w-full border-2 rounded-md h-40 object-cover transition-transform duration-300 opacity-90 ease-in-out hover:scale-110 hover:transform-origin-center" />
       <p>R$ {product.price.toFixed(2)}</p>
       <button
         onClick={() => onAddCart(product)}
