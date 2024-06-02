@@ -7,6 +7,7 @@ import ProductCart from "@/components/ProductCart";
 import ShoppingCart from "@/components/ShoppingCart";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Chatbot from "@/components/ChatBot";
 
 interface Product {
   id: number;
@@ -66,7 +67,9 @@ const Page: React.FC = () => {
       </div>
     </div>
   </div>
+  <Chatbot />
   <Footer />
+  
 </div>
 
   );
