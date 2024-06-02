@@ -60,8 +60,8 @@ const Chatbot = () => {
 
     return (
         <div className="fixed bottom-20 right-8 flex flex-col items-end">
-            <button onClick={alterChat} className="p-2 rounded-md bg-gray-900 hover:bg-orange-500 shadow-3xl">
-                <img src="/img/logo.png" alt="Chatbot" className="w-12 h-12" />
+            <button onClick={alterChat} className="p-2 rounded-md bg-gray-900 hover:bg-orange-500 shadow-lg">
+                <img src="/img/chat.png" alt="Chatbot" className="w-12 h-12" />
             </button>
             {isOpen && (
                 <div className="border p-2 bg-gray-900 shadow-lg rounded-lg max-w-xs m-2 fixed bottom-32 right-20">
