@@ -43,7 +43,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
                 <img src="/img/carrinho.png" alt="Cart" className="w-12 h-12" />
             </button>
             {isOpen && (
-                <div className="border p-2 bg-teal-700 shadow-lg rounded-lg w-max">
+                <div className="border mt-2 opacity-90 p-2 bg-teal-700 shadow-lg rounded-lg w-max">
                     <h2 className="text-3xl font-bold mb-4 text-center text-white">Itens Selecionados</h2>
                     <ul>
                         {items.map(item => (
@@ -57,9 +57,9 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
                             </li>
                         ))}
                     </ul>
-                    <p className="font-bold mt-2 mb-4 text-lg text-white">Total: R$ {calcTotal().toFixed(2)}</p>
-                    <div className="text-white">
-                        <label className="border rounded-lg p-2 block">
+                    <p className="font-bold m-2 mb-4 text-lg text-white">Total: R$ {calcTotal().toFixed(2)}</p>
+                    <div className="text-white m-2">
+                        <label className="border rounded-lg p-2 mb-2 block">
                             <input
                                 type="radio"
                                 value="boleto"
@@ -68,7 +68,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
                             />
                             Boleto Bancário
                         </label>
-                        <label className="border rounded-lg p-2 block">
+                        <label className="border rounded-lg p-2 mb-2 block">
                             <input
                                 type="radio"
                                 value="cartao"
