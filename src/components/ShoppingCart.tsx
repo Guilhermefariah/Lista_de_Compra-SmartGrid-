@@ -18,24 +18,24 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
 
     const updateCart = () => {
         setOpen(!isOpen);
-    };
+    }
 
     const calcTotal = () => {
         return items.reduce((total, item) => total + item.price, 0);
-    };
+    }
 
     const exitLogout = () => {
         setConfirm(true);
-    };
+    }
 
     const confirmLogout = () => {
         setConfirm(false);
         updateCart();
-    };
+    }
 
     const cancelLogout = () => {
         setConfirm(false);
-    };
+    }
 
     return (
         <div className="flex justify-start">
@@ -43,7 +43,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
                 <img src="/img/carrinho.png" alt="Cart" className="w-12 h-12" />
             </button>
             {isOpen && (
-                <div className="border mt-2 opacity-90 p-2 bg-teal-700 shadow-lg rounded-lg w-max">
+                <div className="border mt-2 opacity-90 p-2 bg-gray-900 shadow-lg rounded-lg w-max">
                     <h2 className="text-3xl font-bold mb-4 text-center text-white">Itens Selecionados</h2>
                     <ul>
                         {items.map(item => (
@@ -79,7 +79,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
                         </label>
                     </div>
                     <div className="flex justify-center space-x-4">
-                        <button onClick={onFinish} className="bg-white text-teal-700 px-4 py-2 rounded-lg hover:bg-orange-500 hover:text-white">
+                        <button onClick={onFinish} className="bg-white text-gray-900 px-4 py-2 rounded-lg hover:bg-orange-500 hover:text-white">
                             Finalizar Compra
                         </button>
                         <button onClick={exitLogout} className="bg-orange-500 text-white px-4 py-2 rounded-lg">
@@ -88,12 +88,12 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
                     </div>
                     {onSetConfirm && (
                         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                            <div className="bg-teal-700 p-4 rounded-lg shadow-lg text-center">
+                            <div className="bg-gray-900 p-4 rounded-lg shadow-lg text-center">
                                 <p className="mb-4 text-xl text-white">Tem certeza que deseja sair?</p>
                                 <button onClick={confirmLogout} className="bg-orange-500 text-white px-4 py-2 rounded-lg mr-2">
                                     Sim
                                 </button>
-                                <button onClick={cancelLogout} className="bg-white text-teal-700 px-8 py-2 rounded-lg hover:bg-orange-500 hover:text-white">
+                                <button onClick={cancelLogout} className="bg-white text-gray-900 px-8 py-2 rounded-lg hover:bg-orange-500 hover:text-white">
                                     Não
                                 </button>
                             </div>
@@ -104,6 +104,6 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
         </div>
 
     );
-};
+}
 
 export default ShoppingCart
