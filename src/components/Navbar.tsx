@@ -29,10 +29,10 @@ const Navbar: React.FC = () => {
                     <img src="/img/mercado.png" alt="Logo" className="h-10 w-10 ml-2" />
                 </div>
                 {accordionOpen && (
-                    <div className="absolute bg-white p-0 mt-2 rounded-lg border-2 shadow text-white mx-12 text-center">
+                    <div className="absolute bg-white p-0 mt-2 rounded-lg border-2 shadow text-white mx-4 text-center">
                         <a href="#" className="bg-orange-500 block my-2 mx-2 py-1 px-2 border-2 hover:text-white rounded-lg transition-colors duration-300 hover:bg-teal-700">Cadastrar</a>
-                        <a href="#" className="bg-orange-500 block my-2 mx-2 py-1 px-12 border-2 hover:text-white rounded-lg transition-colors duration-300 hover:bg-teal-700">Entrar</a>
-                        <a href="#" className="bg-orange-500 block my-2 mx-2 py-1 px-12 border-2 hover:text-white rounded-lg transition-colors duration-300 hover:bg-teal-700">Sobre</a>
+                        <a href="#" className="bg-orange-500 block my-2 mx-2 py-1 px-8 border-2 hover:text-white rounded-lg transition-colors duration-300 hover:bg-teal-700">Entrar</a>
+                        <a href="#" className="bg-orange-500 block my-2 mx-2 py-1 px-8 border-2 hover:text-white rounded-lg transition-colors duration-300 hover:bg-teal-700">Sobre</a>
                     </div>
                 )}
             </div>
@@ -43,6 +43,7 @@ const Navbar: React.FC = () => {
             <div className="flex items-center">
             </div>
         </nav>
+
     );
 };
 
