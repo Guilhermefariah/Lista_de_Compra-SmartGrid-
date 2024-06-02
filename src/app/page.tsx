@@ -21,7 +21,8 @@ const Page: React.FC = () => {
     setCart([...cart, product]);
   }
   const removeCart = (product: Product) => {
-    setCart(cart.filter(item => item.id !== product.id));
+    const newCart = cart.filter(item => item.id !== product.id);
+    setCart(newCart);
   }
   const products: Product[] = [
     { id: 1, name: 'Celular', price: 800, image: '/img//1.jpg' },

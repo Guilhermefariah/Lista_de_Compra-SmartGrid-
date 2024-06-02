@@ -43,7 +43,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
                 <img src="/img/carrinho.png" alt="Cart" className="w-12 h-12" />
             </button>
             {isOpen && (
-                <div className="border mt-2 opacity-90 p-2 bg-gray-900 shadow-lg rounded-lg w-max">
+                <div className="border mt-4 opacity-90 p-2 bg-gray-900 shadow-lg rounded-lg w-max">
                     <h2 className="text-3xl font-bold mb-4 text-center text-white">Itens Selecionados</h2>
                     <ul>
                         {items.map(item => (
