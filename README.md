@@ -1,8 +1,10 @@
-# Lista de Compra
+# Lista de Compra para SmartGrid
 
 Este é um projeto de frontend para um e-commerce simples, desenvolvido em Next.js. Ele inclui componentes para exibir produtos e um carrinho de compras.
 
 ![Alt text](/public/img/Lista_de_Compras.jpeg)
+
+![Alt text](/public/img/SmartGrid.jpeg)
 
 
 ## Pré-requisitos
@@ -41,6 +43,9 @@ frontend/
 |-- components/
 |   |-- ProductCard.tsx
 |   |-- ShoppingCart.tsx
+|   |-- Navbar.tsx
+|   |-- Footer.tsx
+|   |-- ChatBot.tsx
 |   
 |-- package.json
 |-- tsconfig.json
