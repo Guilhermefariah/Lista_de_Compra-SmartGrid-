@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react';
 const Navbar: React.FC = () => {
     const [timeLeft, setTimeLeft] = useState(600);
     const [accordionOpen, setLogo] = useState(false);
-
+    const [searchQuery, setSearch] = useState('');
+ 
     useEffect(() => {
         const timer = setInterval(() => {
             setTimeLeft(prevTime => (prevTime > 0 ? prevTime - 1 : 0));
@@ -43,7 +44,6 @@ const Navbar: React.FC = () => {
             <div className="flex items-center">
             </div>
         </nav>
-
     );
 }
 
