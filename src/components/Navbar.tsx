@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
-const Navbar: React.FC = () => {
+interface Navbar {
+    searchQuery: (query: string) => void;
+}
+
+const Navbar: React.FC = ({ searchQuery }) => {
     const [timeLeft, setTimeLeft] = useState(600);
     const [accordionOpen, setLogo] = useState(false);
-    const [searchQuery, setSearch] = useState('');
- 
+    const [searchInput, setSearch] = useState('');
+
     useEffect(() => {
         const timer = setInterval(() => {
             setTimeLeft(prevTime => (prevTime > 0 ? prevTime - 1 : 0));
@@ -21,6 +25,14 @@ const Navbar: React.FC = () => {
         const minutes = Math.floor(seconds / 60);
         const secs = seconds % 60;
         return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+
+    const updateSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearch(e.target.value);
+    }
+    const updateSubimit = (e: React.FormEvent) => {
+        e.preventDefault();
+        searchQuery(searchInput);
     }
 
     return (
@@ -42,6 +54,18 @@ const Navbar: React.FC = () => {
                 <div className="text-white text-lg">Corra! Ofertas limitadas, tempo se esgotando.</div>
             </div>
             <div className="flex items-center">
+                <form onSubmit={updateSubimit} className="flex items-center">
+                    <input
+                        type="text"
+                        value={searchInput}
+                        onChange={updateSearch}
+                        placeholder="Pesquisar..."
+                        className="px-4 py-2 rounded-l-lg border-2 border-orange-500 focus:outline-none"
+                    />
+                    <button type="submit" className="px-4 py-2 bg-orange-500 text-white rounded-r-lg border-2 border-orange-500 hover:bg-gray-900 transition-colors duration-300">
+                        Buscar
+                    </button>
+                </form>
             </div>
         </nav>
     );
