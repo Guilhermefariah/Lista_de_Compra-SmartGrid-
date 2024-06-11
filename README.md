@@ -43,7 +43,9 @@ frontend/
 |-- components/
 |   |-- ProductCard.tsx
 |   |-- ShoppingCart.tsx
-|   |-- Navbar.tsx
+|   |-- Navbar/
+|   |    |-- Navbar.tsx
+|   |    |-- CadastroPage.tsx   
 |   |-- Footer.tsx
 |   |-- ChatBot.tsx
 |   
