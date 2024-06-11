@@ -7,3 +7,4 @@ const CadastroPage: React.FC = () => {
         </div>
     )
 }
+export default CadastroPage
