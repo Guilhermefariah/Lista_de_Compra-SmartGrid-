@@ -40,20 +40,30 @@ const Page: React.FC = () => {
     slidesToShow: 3,
     autoplay: true,
     autoplaySpeed: 2000,
-    rows: 2
+    rows: 2,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          rows: products.length,
+          autoplay: false,
+        }
+      },
+    ]
   }
 
   return (
 <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-900 via-blue-500 to-gray-900">
   <Navbar />
   <div className="flex flex-grow">
-    <div className="flex-grow p-4 mt-16">
+    <div className="flex-grow p-4 mt-16 max-[480px]:p-0">
       <div className="flex justify-center items-center w-full">
         <div className="fixed top-12 mt-2 right-4 z-10 text-lg text-white">
           <ShoppingCart items={cart} onRemoveCart={removeCart} />
         </div>
-        <div className="text-white p-4 bg-no-repeat rounded-lg shadow-3xl bg-gray-900 hover:shadow-2xl">
-          <div className="max-w-3xl mx-auto">
+        <div className="text-white p-4 bg-no-repeat rounded-lg shadow-3xl bg-gray-900 hover:shadow-2xl max-[480px]:w-full">
+          <div className="max-w-3xl mx-auto max-[480px]:w-[90%]">
             <h1 className="text-4xl font-bold text-center">SmartGrid</h1>
             <Slider {...settings}>
               {products.map(product => (

@@ -36,9 +36,9 @@ const Navbar: React.FC = () => {
                     </div>
                 )}
             </div>
-            <div className="flex flex-col items-center flex-grow">
-                <div className="text-white text-4xl">{formatTime(timeLeft)}</div>
-                <div className="text-white text-lg">Corra! Ofertas limitadas, tempo se esgotando.</div>
+            <div className="flex flex-col items-center flex-grow max-[480px]:w-[4rem]">
+                <div className="text-white text-4xl max-[480px]:text-3xl">{formatTime(timeLeft)}</div>
+                <div className="text-white text-lg max-[480px]:text-sm">Corra! Ofertas limitadas, tempo se esgotando.</div>
             </div>
             <div className="flex items-center">
             </div>
