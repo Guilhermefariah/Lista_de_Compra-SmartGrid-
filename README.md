@@ -39,20 +39,38 @@ npm run dev
 frontend/
 |-- src/
 |    |-- page.tsx
-|   
-|-- components/
-|   |-- ProductCard.tsx
-|   |-- ShoppingCart.tsx
-|   |-- Navbar/
-|   |    |-- Navbar.tsx
-|   |    |-- CadastroPage.tsx   
-|   |-- Footer.tsx
-|   |-- ChatBot.tsx
-|   
+|    |-- components/
+|    |   |-- ProductCard.tsx
+|    |   |-- ProductCart.tsx
+|    |   |-- ShoppingCart.tsx
+|    |   |-- Navbar/
+|    |   |    |-- Navbar.tsx
+|    |   |    |-- CadastroPage.tsx   
+|    |   |-- Footer.tsx
+|    |   |-- ChatBot.tsx
+|    |   |-- __tests__/
+|    |       |-- ProductCart.test.tsx
 |-- package.json
 |-- tsconfig.json
 |-- .eslintrc.json
 |-- tailwind.config.js
+|-- jest.config.js
+|-- jest.setup.ts
+```
+
+## Testes com Jest
+Para executar os testes, certifique-se de ter o Jest configurado no projeto. Aqui está como configurar e executar os testes
+
+
+```sh
+npm install --save-dev jest @types/jest ts-jest
+```
+
+## Executando Testes
+Para executar os testes, use o comando
+
+```sh
+npm test
 ```
 
 ## Contribuição
