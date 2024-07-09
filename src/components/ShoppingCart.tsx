@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 interface Product {
@@ -40,7 +41,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
     return (
         <div className="flex justify-start">
             <button onClick={updateCart} className="p-2 rounded-md">
-                <img src="/img/carrinho.png" alt="Cart" className="w-12 h-12" />
+                <Image src="/img/carrinho.png" alt="Cart" width={48} height={48} className="w-12 h-12" />
             </button>
             {isOpen && (
                 <div className="border mt-4 opacity-90 p-2 bg-gray-900 shadow-lg rounded-lg w-max">
@@ -52,7 +53,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
                                     {item.name} - R$ {item.price.toFixed(2)}
                                 </span>
                                 <button onClick={() => onRemoveCart(item)}>
-                                    <img src="/img/lixeira.png" alt="Delete" className="w-14 h-10" />
+                                    <Image src="/img/lixeira.png" alt="Delete" width={56} height={40} className="w-14 h-10" />
                                 </button>
                             </li>
                         ))}
@@ -102,7 +103,6 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ items, onRemoveCart, onFini
                 </div>
             )}
         </div>
-
     );
 }
 

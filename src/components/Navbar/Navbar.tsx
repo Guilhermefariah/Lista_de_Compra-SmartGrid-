@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
+
 
 const Navbar: React.FC = () => {
     const [timeLeft, setTimeLeft] = useState(600);
@@ -26,7 +28,7 @@ const Navbar: React.FC = () => {
         <nav className="fixed top-0 w-full bg-gray-900 p-0 flex mb-4 justify-between items-center shadow-lg z-50">
             <div className="relative">
                 <div onClick={openLogo} className="cursor-pointer">
-                    <img src="/img/logo.png" alt="Logo" className="h-10 w-10 ml-2" />
+                <Image src="/img/logo.png" alt="Logo" height={40} width={40} className="ml-2" />
                 </div>
                 {accordionOpen && (
                     <div className="absolute bg-white p-0 mt-2 rounded-lg border-2 shadow text-white mx-4 text-center">
